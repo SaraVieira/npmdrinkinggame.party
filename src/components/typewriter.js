@@ -6,6 +6,7 @@ if (typeof window !== `undefined`) {
 }
 class Type extends React.Component {
   componentDidMount() {
+    // eslint-disable-next-line no-new
     new TypeIt(this.el, this.props)
   }
 

@@ -13,7 +13,7 @@ class IndexPage extends React.Component {
 
   submitForm = async e => {
     this.setState({
-      loading: true,
+      loading: true
     })
     const { p } = this.state
     e.preventDefault()
@@ -22,7 +22,7 @@ class IndexPage extends React.Component {
 
     this.setState({
       result: data,
-      loading: false,
+      loading: false
     })
   }
 
@@ -50,7 +50,7 @@ class IndexPage extends React.Component {
                   pattern="[a-zA-Z0-9-]+"
                   onChange={e => {
                     this.setState({
-                      p: e.target.value,
+                      p: e.target.value
                     })
                   }}
                 />

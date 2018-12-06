@@ -29,10 +29,10 @@ const Layout = ({ children }) => (
             name="image"
             content="https://rawcdn.githack.com/SaraVieira/npmdrinkinggame.com/bc29d1b751533b73c639654f13feb6592a52acc2/src/images/beer.png"
           />
-          <meta itemprop="name" content="The NPM drinking game" />
-          <meta itemprop="description" content="Good Luck!" />
+          <meta itemProp="name" content="The NPM drinking game" />
+          <meta itemProp="description" content="Good Luck!" />
           <meta
-            itemprop="image"
+            itemProp="image"
             content="https://rawcdn.githack.com/SaraVieira/npmdrinkinggame.com/bc29d1b751533b73c639654f13feb6592a52acc2/src/images/beer.png"
           />
           <meta name="og:title" content="The NPM drinking game" />
@@ -52,7 +52,7 @@ const Layout = ({ children }) => (
 )
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 }
 
 export default Layout
