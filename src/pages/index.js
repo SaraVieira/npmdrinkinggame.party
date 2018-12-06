@@ -1,10 +1,10 @@
 import React from 'react'
 import Layout from '../components/layout'
-import logo from '../images/beer.png'
 import box from '../images/box.png'
 import info from '../utils.js'
 import Footer from '../components/footer'
 import Header from '../components/header'
+import OhNo from '../components/ohno'
 import Lucky from '../components/lucky'
 import './style.css'
 
@@ -32,7 +32,11 @@ class IndexPage extends React.Component {
       <Layout>
         <div className="container is-dark">
           <main>
-            <Header />
+            <Header
+              afterComplete={() => {
+                this.setState({ typingDone: true })
+              }}
+            />
             {typingDone ? (
               <form
                 onSubmit={this.submitForm}
@@ -65,27 +69,7 @@ class IndexPage extends React.Component {
             ) : null}
             {result.code && !loading ? <Lucky /> : null}
             {result.collected && !loading ? (
-              <div className="drink jackInTheBox animated">
-                <p className="white">Oh no! It Exists</p>
-                <p className="white">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={`https://www.npmjs.com/package/${p}`}
-                  >
-                    "{result.collected.metadata.description}"
-                  </a>
-                </p>
-                <p className="white bottom-beer">
-                  Drink up
-                  <img
-                    src={logo}
-                    width="40"
-                    style={{ marginLeft: 10 }}
-                    alt="beer emoji"
-                  />
-                </p>
-              </div>
+              <OhNo value={p} data={result.collected.metadata} />
             ) : null}
           </main>
           {typingDone ? <Footer /> : null}

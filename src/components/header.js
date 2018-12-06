@@ -6,15 +6,13 @@ if (typeof window !== `undefined`) {
   Type = require('./typewriter').default
 }
 
-export default () => (
+export default ({ afterComplete }) => (
   <Fragment>
     <img src={logo} className="beer" alt="beer emoji" />
     <p className="title">Container.is-dark</p>
     <p style={{ color: 'white', textAlign: 'center' }}>
       <Type
-        afterComplete={() => {
-          this.setState({ typingDone: true })
-        }}
+        afterComplete={afterComplete}
         speed={50}
         strings={[
           'Welcome to the npm drinking game',
