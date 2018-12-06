@@ -34,17 +34,10 @@ class IndexPage extends React.Component {
     const { typingDone, loading, result, p } = this.state
     return (
       <Layout>
-        <div class="container is-dark">
-          <main
-            style={{
-              margin: '0 auto',
-              maxWidth: 1100,
-              padding: '0px 1.0875rem 1.45rem',
-              paddingTop: 0,
-            }}
-          >
-            <img src={logo} class="beer" alt="beer emoji" />
-            <p class="title">Container.is-dark</p>
+        <div className="container is-dark">
+          <main>
+            <img src={logo} className="beer" alt="beer emoji" />
+            <p className="title">Container.is-dark</p>
             <p style={{ color: 'white', textAlign: 'center' }}>
               <Type
                 afterComplete={() => {
@@ -66,9 +59,9 @@ class IndexPage extends React.Component {
               >
                 <input
                   type="text"
-                  class="input"
+                  className="input"
                   required
-                  minlength="3"
+                  minLength="3"
                   pattern="[a-zA-Z0-9-]+"
                   onChange={e => {
                     this.setState({
@@ -91,17 +84,17 @@ class IndexPage extends React.Component {
             ) : null}
             {result.code && !loading ? (
               <Fragment>
-                <p class="white lucky animated tada">
+                <p className="white lucky animated tada">
                   <span> You are in luck</span>{' '}
-                  <i class="icon heart is-medium" />
+                  <i className="icon heart is-medium" />
                 </p>
-                <p class="white lucky animated tada">
+                <p className="white lucky animated tada">
                   <span> Wanna try again?</span>
                 </p>
               </Fragment>
             ) : null}
             {result.collected && !loading ? (
-              <div class="drink jackInTheBox animated">
+              <div className="drink jackInTheBox animated">
                 <p className="white">Oh no! It Exists</p>
                 <p className="white">
                   <a
@@ -125,7 +118,7 @@ class IndexPage extends React.Component {
             ) : null}
           </main>
           {typingDone ? (
-            <footer class="white animated fadeInUp">
+            <footer className="white animated fadeInUp">
               <span>Not affiliated with NPM</span>
               <span>
                 Made by{' '}

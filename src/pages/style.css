@@ -6,10 +6,7 @@
 
 body {
   margin: 0;
-  /*gets rid of white space around body*/
-  /*you can let your content define it's height*/
   position: relative;
-  /*REQUIRED Sets up positioning for your footer*/
 }
 
 .input-form {
@@ -22,6 +19,13 @@ body {
   width: 80%;
   align-items: center;
   margin-bottom: 50px;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0px 1.0875rem 1.45rem;
+  padding-top: 0px;
 }
 
 @media screen and (max-width: 650px) {
