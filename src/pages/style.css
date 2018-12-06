@@ -1,0 +1,99 @@
+.beer {
+  margin: auto;
+  display: block;
+  margin-top: 30px;
+}
+
+body {
+  margin: 0;
+  /*gets rid of white space around body*/
+  /*you can let your content define it's height*/
+  position: relative;
+  /*REQUIRED Sets up positioning for your footer*/
+}
+
+.input-form {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  position: relative;
+  max-width: 600px;
+  width: 80%;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 650px) {
+  .input-form {
+    flex-direction: column;
+  }
+  .input-form button {
+    margin-top: 20px;
+  }
+}
+
+.input-form input {
+  width: 100%;
+  margin: 0;
+  height: 46px;
+  padding-right: 250px;
+}
+
+.input-form button {
+  min-width: 240px;
+}
+
+.white {
+  color: white;
+}
+
+footer {
+  width: 100%;
+  height: 44px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  left: 15px;
+  text-align: center;
+  width: calc(100% - 30px);
+}
+
+.container {
+  position: relative;
+}
+
+.loading {
+  margin: auto;
+  display: block;
+}
+
+.drink {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.bottom-beer {
+  display: flex;
+  align-items: center;
+}
+
+.lucky {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  justify-content: center;
+}
+
+.lucky i {
+  margin-left: 10px;
+}
