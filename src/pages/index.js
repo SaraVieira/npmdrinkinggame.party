@@ -3,10 +3,14 @@ import 'nes.css/css/nes.css'
 import Layout from '../components/layout'
 import logo from '../images/beer.png'
 import box from '../images/box.png'
-import Type from '../components/typewriter'
 import info from '../utils.js'
 import './style.css'
 import 'animate.css'
+let Type = Fragment
+
+if (typeof window !== `undefined`) {
+  Type = require('../components/typewriter').default
+}
 
 class IndexPage extends React.Component {
   state = { loading: false, typingDone: false, result: {} }
@@ -46,6 +50,7 @@ class IndexPage extends React.Component {
                 afterComplete={() => {
                   this.setState({ typingDone: true })
                 }}
+                speed={50}
                 strings={[
                   'Welcome to the npm drinking game',
                   'The rules are simple.',
@@ -121,7 +126,7 @@ class IndexPage extends React.Component {
           </main>
           {typingDone ? (
             <footer class="white animated fadeInUp">
-              <span>This website is not affiliated with NPM</span>
+              <span>Not affiliated with NPM</span>
               <span>
                 Made by{' '}
                 <a

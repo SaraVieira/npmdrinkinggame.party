@@ -1,6 +1,9 @@
-import TypeIt from 'typeit'
-import React from 'react'
+import React, { Fragment } from 'react'
+let TypeIt = Fragment
 
+if (typeof window !== `undefined`) {
+  TypeIt = require('typeit').default
+}
 class Type extends React.Component {
   componentDidMount() {
     new TypeIt(this.el, this.props)
