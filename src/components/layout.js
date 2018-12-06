@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
@@ -19,7 +19,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <Fragment>
         <Helmet title={data.site.siteMetadata.title}>
           <html lang="en" />
           <meta charset="utf-8" />
@@ -46,7 +46,7 @@ const Layout = ({ children }) => (
         </Helmet>
 
         {children}
-      </>
+      </Fragment>
     )}
   />
 )
