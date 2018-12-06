@@ -1,16 +1,12 @@
-import React, { Fragment } from 'react'
-import 'nes.css/css/nes.css'
+import React from 'react'
 import Layout from '../components/layout'
 import logo from '../images/beer.png'
 import box from '../images/box.png'
 import info from '../utils.js'
+import Footer from '../components/footer'
+import Header from '../components/header'
+import Lucky from '../components/lucky'
 import './style.css'
-import 'animate.css'
-let Type = Fragment
-
-if (typeof window !== `undefined`) {
-  Type = require('../components/typewriter').default
-}
 
 class IndexPage extends React.Component {
   state = { loading: false, typingDone: false, result: {} }
@@ -36,22 +32,7 @@ class IndexPage extends React.Component {
       <Layout>
         <div className="container is-dark">
           <main>
-            <img src={logo} className="beer" alt="beer emoji" />
-            <p className="title">Container.is-dark</p>
-            <p style={{ color: 'white', textAlign: 'center' }}>
-              <Type
-                afterComplete={() => {
-                  this.setState({ typingDone: true })
-                }}
-                speed={50}
-                strings={[
-                  'Welcome to the npm drinking game',
-                  'The rules are simple.',
-                  'Input an english word in the input and if it exists in npm you must drink',
-                  'Good luck',
-                ]}
-              />
-            </p>
+            <Header />
             {typingDone ? (
               <form
                 onSubmit={this.submitForm}
@@ -82,17 +63,7 @@ class IndexPage extends React.Component {
                 alt="beer emoji"
               />
             ) : null}
-            {result.code && !loading ? (
-              <Fragment>
-                <p className="white lucky animated tada">
-                  <span> You are in luck</span>{' '}
-                  <i className="icon heart is-medium" />
-                </p>
-                <p className="white lucky animated tada">
-                  <span> Wanna try again?</span>
-                </p>
-              </Fragment>
-            ) : null}
+            {result.code && !loading ? <Lucky /> : null}
             {result.collected && !loading ? (
               <div className="drink jackInTheBox animated">
                 <p className="white">Oh no! It Exists</p>
@@ -117,21 +88,7 @@ class IndexPage extends React.Component {
               </div>
             ) : null}
           </main>
-          {typingDone ? (
-            <footer className="white animated fadeInUp">
-              <span>Not affiliated with NPM</span>
-              <span>
-                Made by{' '}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={`https://twitter.com/NikkitaFTW`}
-                >
-                  @NikkitaFTW
-                </a>
-              </span>
-            </footer>
-          ) : null}
+          {typingDone ? <Footer /> : null}
         </div>
       </Layout>
     )
