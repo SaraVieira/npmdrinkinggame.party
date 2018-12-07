@@ -10,7 +10,14 @@ export default ({ afterComplete }) => (
   <Fragment>
     <img src={logo} className="beer" alt="beer emoji" />
     <p className="title">Container.is-dark</p>
-    <p style={{ color: 'white', textAlign: 'center' }}>
+    <p
+      style={{
+        margin: 'auto',
+        maxWidth: 600,
+        color: 'white',
+        textAlign: 'center'
+      }}
+    >
       <Type
         afterComplete={afterComplete}
         speed={50}

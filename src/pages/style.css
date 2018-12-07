@@ -28,15 +28,6 @@ main {
   padding-top: 0px;
 }
 
-@media screen and (max-width: 650px) {
-  .input-form {
-    flex-direction: column;
-  }
-  .input-form button {
-    margin-top: 20px;
-  }
-}
-
 a {
   color: #56cdc9;
 }
@@ -64,6 +55,7 @@ footer {
   bottom: 0;
   left: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   font-size: 12px;
   left: 15px;
@@ -117,4 +109,20 @@ footer {
   clip: rect(1px 1px 1px 1px);
   /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+@media screen and (max-width: 650px) {
+  .input-form {
+    flex-direction: column;
+  }
+  .input-form button {
+    margin-top: 20px;
+  }
+  footer {
+    height: 90px;
+    justify-content: center;
+  }
+  footer>* {
+    padding: 10px;
+  }
 }
