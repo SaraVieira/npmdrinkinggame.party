@@ -8,7 +8,7 @@ export default ({ data, value }) => (
       <a
         target="_blank"
         rel="noopener noreferrer"
-        href={`https://www.npmjs.com/package/${value}`}
+        href={`https://www.npmjs.com/package/${value.toLowerCase()}`}
       >
         "{data.description}"
       </a>
