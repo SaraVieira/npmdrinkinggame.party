@@ -3,27 +3,32 @@ module.exports = {
     title: 'The NPM drinking game'
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`
+        name: `The NPM drinking game`,
+        short_name: `NPM drinking game`,
+        start_url: `/`,
+        background_color: `#212529`,
+        theme_color: `#212529`,
+        display: `minimal-ui`,
+        icon: `./src/images/beer.png`
       }
     },
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: 'UA-123681166-2'
       }
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
         logo: './src/images/beer.png'
       }
-    }
+    },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-purgecss`
   ]
 }

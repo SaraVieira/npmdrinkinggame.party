@@ -5,7 +5,11 @@ import { StaticQuery, graphql } from 'gatsby'
 import 'nes.css/css/nes.css'
 import 'animate.css'
 
+import { setConfig } from 'react-hot-loader'
+
 import './layout.css'
+
+setConfig({ pureSFC: true })
 
 const Layout = ({ children }) => (
   <StaticQuery

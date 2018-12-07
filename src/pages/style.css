@@ -37,14 +37,20 @@ main {
   }
 }
 
+a {
+  color: #56cdc9;
+}
+
 .input-form input {
   width: 100%;
   margin: 0;
   height: 46px;
 }
 
-.input-form button {
+.input-form .btn.is-primary {
   min-width: 240px;
+  background: #008800;
+  box-shadow: inset -4px -4px #539e38;
 }
 
 .white {
@@ -82,6 +88,7 @@ footer {
   flex-direction: column;
   margin-bottom: 50px;
   text-align: center;
+  max-width: 500px;
 }
 
 .bottom-beer {
@@ -99,4 +106,15 @@ footer {
 
 .lucky i {
   margin-left: 10px;
+}
+
+.visually-hidden {
+  /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
 }

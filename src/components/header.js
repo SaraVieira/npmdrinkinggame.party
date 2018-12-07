@@ -17,7 +17,7 @@ export default ({ afterComplete }) => (
         strings={[
           'Welcome to the npm drinking game',
           'The rules are simple.',
-          'Input an english word in the input and if it exists in npm you must drink',
+          'Write an english word in the input and if it exists in npm you must drink',
           'Good luck'
         ]}
       />
