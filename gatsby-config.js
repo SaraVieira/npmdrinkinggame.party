@@ -11,7 +11,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#212529`,
         theme_color: `#212529`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `./src/images/beer.png`
       }
     },
