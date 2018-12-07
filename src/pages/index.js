@@ -9,7 +9,7 @@ import './style.css'
 
 const IndexPage = () => {
   const [loading, setLoading] = useState(false)
-  const [typingDone, setTyping] = useState(true)
+  const [typingDone, setTyping] = useState(false)
   const [result, setResult] = useState({})
   const [p, setPackage] = useState('')
 
